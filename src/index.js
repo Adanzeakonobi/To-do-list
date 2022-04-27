@@ -1,14 +1,53 @@
+// eslint-disable-next-line no-unused-vars
 import _ from "lodash";
-import './style.css';
+import "./style.css";
 
-function component() {
-  const element = document.createElement("div");
+const container = document.querySelector(".list-container");
 
-  // Lodash, now imported by this script
-  element.innerHTML = _.join(["Hello", "webpack"], " ");
-  element.classList.add('hello');
+const todoList = [
+  {
+    index: 1,
+    description: "Wash the Dishes",
+    completed: true,
+  },
+  {
+    index: 2,
+    description: "Complete to-do list Project",
+    completed: true,
+  },
+];
 
-  return element;
+function clear(element) {
+  while (element.firstChild) element.removeChild(element.firstChild);
 }
 
-document.body.appendChild(component());
+function render() {
+  clear(container);
+  todoList.forEach((todo) => {
+    const div = document.createElement("div");
+    const listElement = document.createElement("li");
+    const input = document.createElement("input");
+    const span = document.createElement("span");
+
+    input.type = "checkbox";
+    input.name = "name";
+    input.value = "value";
+    input.id = "id";
+    input.classList.add("cursor");
+    listElement.dataset.listId = todo.index;
+    div.classList.add("listcont-prop");
+    listElement.classList.add("list-prop");
+    span.classList.add("grow");
+    span.innerHTML = `${todo.description}`;
+    const icon = document.createElement("i");
+    icon.classList.add("fas");
+    icon.classList.add("fa-ellipsis-v");
+    listElement.appendChild(input);
+    listElement.appendChild(span);
+    listElement.appendChild(icon);
+    div.appendChild(listElement);
+    container.appendChild(div);
+  });
+}
+
+render();
