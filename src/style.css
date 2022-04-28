@@ -6,17 +6,17 @@ body {
   margin: 0;
 }
 
-#tab {
+#title1 {
   background-color: white;
   box-shadow: 10px 10px 10px grey;
-  max-width: 30%;
+  max-width: 50%;
   margin: auto;
-  height: 50vh;
+  height: 70vh;
   margin-top: 100px;
   position: relative;
 }
 
-.main {
+.main-header {
   border-bottom: 1px solid grey;
   padding: 20px;
   margin: auto;

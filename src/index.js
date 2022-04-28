@@ -12,7 +12,12 @@ const todoList = [
   },
   {
     index: 2,
-    description: "Complete to-do list Project",
+    description: "clean the house",
+    completed: true,
+  },
+  {
+    index: 3,
+    description: "store up for the fridge",
     completed: true,
   },
 ];
