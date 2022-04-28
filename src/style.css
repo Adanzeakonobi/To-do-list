@@ -1,0 +1,77 @@
+body {
+  background-color: rgb(221, 217, 217);
+}
+
+.list-container {
+  margin: 0;
+}
+
+#title1 {
+  background-color: white;
+  box-shadow: 10px 10px 10px grey;
+  max-width: 45%;
+  margin: auto;
+  height: 70vh;
+  margin-top: 100px;
+  position: relative;
+}
+
+.main-header {
+  border-bottom: 1px solid grey;
+  padding: 20px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+input,
+button {
+  border-style: hidden;
+  background-color: transparent;
+  color: grey;
+  font-style: italic;
+  outline: none;
+}
+
+.enter {
+  transform: rotate(90deg);
+}
+
+.cursor,
+i {
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked + span {
+  color: red;
+  text-decoration: line-through;
+}
+
+.listcont-prop {
+  list-style-type: none;
+  border-bottom: 1px solid grey;
+  padding: 20px;
+  margin: 0 0 0 -40px;
+  display: flex;
+}
+
+.list-prop {
+  display: flex;
+  width: 100%;
+}
+
+.grow {
+  flex-grow: 1;
+  margin-left: 5px;
+}
+
+.clear {
+  text-align: center;
+  background-color: rgb(221, 217, 217);
+  color: grey;
+  padding: 20px 0;
+  margin: auto;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
