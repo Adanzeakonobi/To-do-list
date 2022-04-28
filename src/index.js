@@ -2,7 +2,7 @@
 import _ from 'lodash';
 import './style.css';
 import { status, todoList, save } from './check.js';
-import { createList, deleteList, deleteAllDone } from './addrem.js';
+import { createList, deleteList } from './addrem.js';
 
 const container = document.querySelector('.list-container');
 const newList = document.querySelector('.form');
