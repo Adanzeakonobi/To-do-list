@@ -1,23 +1,28 @@
 // eslint-disable-next-line no-unused-vars
-import _ from "lodash";
-import "./style.css";
+import _ from 'lodash';
+import './style.css';
 
-const container = document.querySelector(".list-container");
+const container = document.querySelector('.list-container');
 
 const todoList = [
   {
     index: 1,
-    description: "Wash the Dishes",
+    description: 'Wash the Dishes',
     completed: true,
   },
   {
     index: 2,
-    description: "clean the house",
+    description: 'Clean the house',
     completed: true,
   },
   {
     index: 3,
-    description: "store up for the fridge",
+    description: 'Store up for the fridge',
+    completed: true,
+  },
+  {
+    index: 4,
+    description: 'Cook food for the week',
     completed: true,
   },
 ];
@@ -29,24 +34,24 @@ function clear(element) {
 function render() {
   clear(container);
   todoList.forEach((todo) => {
-    const div = document.createElement("div");
-    const listElement = document.createElement("li");
-    const input = document.createElement("input");
-    const span = document.createElement("span");
+    const div = document.createElement('div');
+    const listElement = document.createElement('li');
+    const input = document.createElement('input');
+    const span = document.createElement('span');
 
-    input.type = "checkbox";
-    input.name = "name";
-    input.value = "value";
-    input.id = "id";
-    input.classList.add("cursor");
+    input.type = 'checkbox';
+    input.name = 'name';
+    input.value = 'value';
+    input.id = 'id';
+    input.classList.add('cursor');
     listElement.dataset.listId = todo.index;
-    div.classList.add("listcont-prop");
-    listElement.classList.add("list-prop");
-    span.classList.add("grow");
+    div.classList.add('listcont-prop');
+    listElement.classList.add('list-prop');
+    span.classList.add('grow');
     span.innerHTML = `${todo.description}`;
-    const icon = document.createElement("i");
-    icon.classList.add("fas");
-    icon.classList.add("fa-ellipsis-v");
+    const icon = document.createElement('i');
+    icon.classList.add('fas');
+    icon.classList.add('fa-ellipsis-v');
     listElement.appendChild(input);
     listElement.appendChild(span);
     listElement.appendChild(icon);
