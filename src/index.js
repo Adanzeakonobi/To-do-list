@@ -2,12 +2,13 @@
 import _ from 'lodash';
 import './style.css';
 import { status, todoList, save } from './check.js';
-import { createList, deleteList } from './addrem.js';
+import { createList, deleteList, deleteAllDone } from './addrem.js';
 
 const container = document.querySelector('.list-container');
 const newList = document.querySelector('.form');
 const newBar = document.querySelector('.add-bar');
 const refresh = document.querySelector('.fa-sync-alt');
+const clearCompleted = document.querySelector('.clear');
 
 const clear = (element) => {
   while (element.firstChild) element.removeChild(element.firstChild);
@@ -89,3 +90,4 @@ newList.addEventListener('submit', (e) => {
 });
 
 container.addEventListener('click', deleteList);
+clearCompleted.addEventListener('click', deleteAllDone);
