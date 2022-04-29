@@ -2,6 +2,7 @@
 
 # To Do List
 This project was built using a simple simple webpack
+![screenshot](./src/output.PNG)
 
 ## Built With
 
