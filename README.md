@@ -14,7 +14,7 @@ This project was built using a simple simple webpack
 
 ## Live Demo
 
-[Live View!!](https://Adanzeakonobi.github.io/To-Do-List/dist/)
+[Live View!!](https://adanzeakonobi.github.io/To-do-list/dist/)
 
 ## Author
 
